@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GG theory</title>
+  <meta name="description" content="">
+  <meta name="author" content="Tony Fujs">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/solarized_light.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h2>Objective: Understand the gg framework</h2>
+  <p><q>Ggplot2 is an <strong>amazing</strong> tool for static data visualization. It is not necessarily obvious to realize how powerful it is until you get a strong understanding of its underlying logic though: The Grammar of Graphics. Using ggplot2 without understanding its underlying logic is possible, like going to see a 3D movie without your 3D glasses... You can certainly do it, but don&#39;t expect to get the full experience.</q></p>
+
+</section>
+<h2>Setup</h2>
+<p><a class='example'>Your Turn</a></p>
+
+<pre><code>author(&quot;myDeck&quot;)
+</code></pre>
+
+<section class='class' data-state='' id='id'>
+  <h2>PRACTICE TIME!!</h2>
+  <p><img src="./tof/height.png" alt=""></p>
+
+<p>DRAW A SCATTER PLOT OF THE FOLLOWING DATASET</p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>PRACTICE TIME!!</h2>
+  <p><img src="./tof/height.png" alt=""></p>
+
+<p>DESCRIBE THE STEPS YOU TOOK TO DRAW THE PLOT</p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Scatter plots: STEP 1</h2>
+  <p>Start with your data set.</p>
+
+<p><img src="./tof/gg1.png" alt=""></p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Scatter plots: STEP 2</h2>
+  <p><img src="./tof/gg2.png" alt=""></p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Scatter plots: STEP 3</h2>
+  <p><img src="./tof/gg3.png" alt=""></p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Scatter plots: STEP 4</h2>
+  <p><img src="./tof/gg4.png" alt=""></p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Scatter plots: STEP 5</h2>
+  <p><img src="./tof/gg5.png" alt=""></p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Grammar of graphic summary</h2>
+  <p><img src="./tof/ggtab1.png" alt=""></p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>DATA</h2>
+  <p><img src="./tof/ggtab_data.png" alt=""></p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Data</h2>
+  <pre><code>##   year state stores
+## 1 2005    FL    174
+## 2 2005    MI     76
+## 3 2005    NJ     41
+## 4 2005    NV     22
+## 5 2005    VT      4
+</code></pre>
+
+<ul>
+<li>Code</li>
+</ul>
+
+<pre><code class="r">data = mini_walmart
+</code></pre>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>AESTHETIC MAPPING</h2>
+  <p><img src="./tof/ggtab_aes.png" alt=""></p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Aesthetics: position</h2>
+  <pre><code>##   year state stores
+## 1 2005    FL    174
+## 2 2005    MI     76
+## 3 2005    NJ     41
+## 4 2005    NV     22
+## 5 2005    VT      4
+</code></pre>
+
+<pre><code class="r">aes(x = state,y = stores)
+data = mini_walmart
+</code></pre>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Next slide</h2>
+  
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
