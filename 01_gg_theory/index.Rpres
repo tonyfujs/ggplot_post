@@ -217,7 +217,7 @@ DATA
 
 ![](./tof/ggtab_data.png)
 
-Data
+DATA
 ====================================
 
 
@@ -226,26 +226,17 @@ mini_walmart[,1:3]
 ```
 
 * Code
-```{r, eval = FALSE}
-data = mini_walmart
-```
+<pre><code class="r"><b>data = mini_walmart</b></code></pre>
 
 ***
 
-<pre><code class="r">
-ggplot() + 
-geom_point(
- aes(x = state,y = stores),
- <b>data = mini_walmart</b>)
-</code></pre>
 
 AESTHETIC MAPPING
 ====================================
 
-
 ![](./tof/ggtab_aes.png)
 
-Aesthetics: position
+AESTHETICS: POSITION
 ====================================
 
 
@@ -253,10 +244,10 @@ Aesthetics: position
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
-aes(x = state,y = stores)
+<pre><code class="r">
+<b>aes(x = state,y = stores)</b>
 data = mini_walmart
-```
+</code></pre>
 
 ***
 
@@ -269,10 +260,10 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
-aes(x = state,y = stores)
+<pre><code class="r">
+<b>aes(x = state,y = stores)</b>
 data = mini_walmart
-```
+</code></pre>
 
 ***
 
@@ -288,11 +279,11 @@ Aesthetics: color
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores,
-    color = stores)
+   <b>color = stores</b>)
 data = mini_walmart
-```
+</code></pre>
 
 ***
 
@@ -308,11 +299,11 @@ Aesthetics: color
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores,
-    color = state)
+   <b>color = states</b>)
 data = mini_walmart
-```
+</code></pre>
 
 ***
 
@@ -328,11 +319,11 @@ Aesthetics: shape
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores,
-    shape = state)
+  <b>shape = state</b>)
 data = mini_walmart
-```
+</code></pre>
 
 ***
 
@@ -348,11 +339,11 @@ type: practice
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
-#COMPLETE THE CODE TO PRODUCE THIS PLOT
+<pre><code class="r">
+<b>#COMPLETE THE CODE TO PRODUCE THIS PLOT</b>
 aes(x = state,y = stores)
 data = mini_walmart
-```
+</code></pre>
 
 ***
 
@@ -369,13 +360,13 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 #COMPLETE THE CODE TO PRODUCE THIS PLOT
 aes(x = state,y = stores,
-    color = state,
-    shape = state)
+   <b>color = state,
+   shape = state</b>)
 data = mini_walmart
-```
+</code></pre>
 
 ***
 
@@ -391,11 +382,11 @@ type: practice
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
-# WHAT ADDITIONAL AESTHETIC MAPPING IS NEEDED TO PRODUCE THIS PLOT?
+<pre><code class="r">
+<b># WHAT ADDITIONAL AESTHETIC MAPPING IS NEEDED TO PRODUCE THIS PLOT?</b>
 aes(x = state,y = stores)
 data = mini_walmart
-```
+</code></pre>
 
 ***
 
@@ -412,12 +403,12 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 # WHAT ADDITIONAL AESTHETIC MAPPING IS NEEDED TO PRODUCE THIS PLOT?
 aes(x = state,y = stores,
-    size = stores)
+   <b>size = stores</b>)
 data = mini_walmart
-```
+</code></pre>
 
 ***
 
@@ -427,7 +418,6 @@ aes_size
 
 SCALE
 ====================================
-
 
 ![](./tof/ggtab_scale.png)
 
@@ -439,10 +429,10 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-```
+</code></pre>
 
 ***
 
@@ -458,11 +448,11 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart 
-scale_y_continuous()
-```
+<b>scale_y_continuous()</b>
+</code></pre>
 
 ***
 
@@ -479,11 +469,11 @@ Scale: position (log)
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart 
-scale_y_log10()
-```
+<b>scale_y_log10()</b>
+</code></pre>
 
 ***
 
@@ -500,11 +490,11 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores,
-    color = stores)
+   <b>color = stores</b>)
 data = mini_walmart 
-```
+</code></pre>
 
 ***
 
@@ -521,12 +511,12 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores,
     color = stores)
 data = mini_walmart
-scale_color_continuous()
-```
+<b>scale_color_continuous()</b>
+</code></pre>
 
 ***
 
@@ -543,14 +533,14 @@ Scale: color
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores,
     color = stores)
 data = mini_walmart
-scale_color_continuous(
+<b>scale_color_continuous(
   low = 'light green',
-  high = 'dark green')
-```
+  high = 'dark green')</b>
+</code></pre>
 
 ***
 
@@ -574,10 +564,10 @@ Geometric objects: point
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-```
+</code></pre>
 
 ***
 
@@ -594,11 +584,11 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-geom_point()
-```
+<b>geom_point()</b>
+</code></pre>
 
 ***
 
@@ -615,11 +605,11 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-geom_bar()
-```
+<b>geom_bar()</b>
+</code></pre>
 
 ***
 
@@ -635,11 +625,11 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-geom_bar()
-```
+<b>geom_bar()</b>
+</code></pre>
 
 ***
 
@@ -657,11 +647,11 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
-# COMPLETE THE CODE TO PRODUCE THIS PLOT
+<pre><code class="r">
+<b># COMPLETE THE CODE TO PRODUCE THIS PLOT</b>
 aes(x = state,y = stores)
 data = mini_walmart
-```
+</code></pre>
 
 ***
 
@@ -679,12 +669,12 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 # COMPLETE THE CODE TO PRODUCE THIS PLOT
 aes(x = state,y = stores)
 data = mini_walmart
-geom_line()
-```
+<b>geom_line()</b>
+</code></pre>
 
 ***
 
@@ -701,11 +691,11 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-geom_text()
-```
+<b>geom_text()</b>
+</code></pre>
 
 ***
 
@@ -721,11 +711,11 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-geom_text()
-```
+<b>geom_text()</b>
+</code></pre>
 
 ***
 
@@ -740,12 +730,12 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = state,y = stores,
-    label = stores)
+  <b>label = stores</b>)
 data = mini_walmart
 geom_text()
-```
+</code></pre>
 
 ***
 
@@ -768,11 +758,11 @@ Position adjustment: identity
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores)
 data = mini_walmart
 geom_point()
-```
+</code></pre>
 
 ***
 
@@ -789,12 +779,12 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores)
 data = mini_walmart
 geom_point()
-position = 'identity'
-```
+<b>position = 'identity'</b>
+</code></pre>
 
 ***
 
@@ -811,12 +801,12 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores)
 data = mini_walmart
-geom_bar()
-position = identity
-```
+<b>geom_bar()
+position = identity</b>
+</code></pre>
 
 ***
 
@@ -831,12 +821,12 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores)
 data = mini_walmart
 geom_bar()
-position = identity
-```
+<b>position = identity</b>
+</code></pre>
 
 ***
 
@@ -853,13 +843,13 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   <b>fill = state</b>)
 data = mini_walmart
 geom_bar()
 position = identity
-```
+</code></pre>
 
 ***
 
@@ -876,13 +866,13 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   <b>fill = state</b>)
 data = mini_walmart
 geom_bar()
 position = identity
-```
+</code></pre>
 
 ***
 
@@ -899,13 +889,13 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   <b>fill = state</b>)
 data = mini_walmart
 geom_bar()
 position = identity
-```
+</code></pre>
 
 ***
 
@@ -922,13 +912,13 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   <b>fill = state</b>)
 data = mini_walmart
 geom_bar()
 position = identity
-```
+</code></pre>
 
 ***
 
@@ -945,13 +935,13 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   <b>fill = state</b>)
 data = mini_walmart
 geom_bar()
 position = identity
-```
+</code></pre>
 
 ***
 
@@ -968,13 +958,13 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   <b>fill = state</b>)
 data = mini_walmart
 geom_bar()
 position = identity
-```
+</code></pre>
 
 ***
 
@@ -991,13 +981,13 @@ Position adjustment: dodge
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   fill = state)
 data = mini_walmart
 geom_bar()
-position = dodge
-```
+<b>position = dodge</b>
+</code></pre>
 
 ***
 
@@ -1014,13 +1004,13 @@ Position adjustment: stack
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores,
     fill = state)
 data = mini_walmart
 geom_bar()
-position = stack
-```
+<b>position = stack</b>
+</code></pre>
 
 ***
 
@@ -1037,22 +1027,19 @@ Position adjustment: fill
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores,
     fill = state)
 data = mini_walmart
 geom_bar()
-position = fill
-```
+<b>position = fill</b>
+</code></pre>
 
 ***
 
 ```{r, echo = FALSE, out.height = 700, out.width = 700}
 pos_fill
 ```
-
-
-
 
 
 COORDINATE SYSTEM: cartesian
@@ -1069,13 +1056,13 @@ COORDINATE SYSTEM: cartesian
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   fill = state)
 data = mini_walmart
 geom_bar()
 position = fill
-```
+</code></pre>
 
 ***
 
@@ -1092,14 +1079,14 @@ COORDINATE SYSTEM: cartesian
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   fill = state)
 data = mini_walmart
 geom_bar()
 position = fill
-coord_cartesian()
-```
+<b>coord_cartesian()</b>
+</code></pre>
 
 ***
 
@@ -1116,14 +1103,14 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores,
     fill = state)
 data = mini_walmart
 geom_bar()
 position = fill
-coord_polar()
-```
+<b>coord_polar()</b>
+</code></pre>
 
 ***
 
@@ -1139,14 +1126,14 @@ incremental: false
 mini_walmart[,1:3]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = year,y = stores,
     fill = state)
 data = mini_walmart
 geom_bar()
 position = fill
-coord_polar()
-```
+<b>coord_polar()</b>
+</code></pre>
 
 ***
 
@@ -1197,11 +1184,11 @@ STATISTICAL TRANSFORMATION: identity
 mini_walmart[,c(1:3,5)]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = stores, y = share)
 data = mini_walmart
 geom_point()
-```
+</code></pre>
 
 ***
 
@@ -1218,11 +1205,11 @@ STATISTICAL TRANSFORMATION: identity
 mini_walmart[,c(1:3,5)]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = stores, y = share)
 data = mini_walmart
-geom_point(stat = 'identity')
-```
+geom_point(<b>stat = 'identity'</b>)
+</code></pre>
 
 ***
 
@@ -1239,11 +1226,11 @@ STATISTICAL TRANSFORMATION: smooth
 mini_walmart[,c(1:3,5)]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = stores, y = share)
 data = mini_walmart
-geom_point(stat = 'smooth')
-```
+geom_point(<b>stat = 'smooth'</b>)
+</code></pre>
 
 ***
 
@@ -1260,11 +1247,11 @@ STATISTICAL TRANSFORMATION: smooth
 mini_walmart[,c(1:3,5)]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = stores, y = share)
 data = mini_walmart
-geom_line(stat = 'smooth')
-```
+<b>geom_line</b>(stat = 'smooth')
+</code></pre>
 
 ***
 
@@ -1281,11 +1268,11 @@ LAYER
 mini_walmart[,c(1:3,5)]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = stores, y = share)
 data = mini_walmart
-geom_point(stat = 'identity')
-```
+<b>geom_point(stat = 'identity')</b>
+</code></pre>
 
 ***
 
@@ -1302,12 +1289,12 @@ LAYER
 mini_walmart[,c(1:3,5)]
 ```
 
-```{r, eval = FALSE}
+<pre><code class="r">
 aes(x = stores, y = share)
 data = mini_walmart
-geom_point(stat = 'identity') +
-geom_line(stat = 'smooth')
-```
+<b>geom_point(stat = 'identity') +
+geom_line(stat = 'smooth')</b>
+</code></pre>
 
 ***
 

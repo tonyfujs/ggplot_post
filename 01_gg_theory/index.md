@@ -15,7 +15,6 @@ css: ./theme/my_style.css
 
 
 
-
 ========================================================
 incremental: false
 
@@ -211,7 +210,7 @@ DATA
 
 ![](./tof/ggtab_data.png)
 
-Data
+DATA
 ====================================
 
 
@@ -225,30 +224,18 @@ Data
 5 2005    VT      4
 ```
 
-
 * Code
-
-```r
-data = mini_walmart
-```
-
+<pre><code class="r"><b>data = mini_walmart</b></code></pre>
 
 ***
 
-<pre><code class="r">
-ggplot() + 
-geom_point(
- aes(x = state,y = stores),
- <b>data = mini_walmart</b>)
-</code></pre>
 
 AESTHETIC MAPPING
 ====================================
 
-
 ![](./tof/ggtab_aes.png)
 
-Aesthetics: position
+AESTHETICS: POSITION
 ====================================
 
 
@@ -262,13 +249,10 @@ Aesthetics: position
 5 2005    VT      4
 ```
 
-
-
-```r
-aes(x = state,y = stores)
+<pre><code class="r">
+<b>aes(x = state,y = stores)</b>
 data = mini_walmart
-```
-
+</code></pre>
 
 ***
 
@@ -287,18 +271,14 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
-aes(x = state,y = stores)
+<pre><code class="r">
+<b>aes(x = state,y = stores)</b>
 data = mini_walmart
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-7.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-4.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 Aesthetics: color
 ====================================
@@ -314,19 +294,15 @@ Aesthetics: color
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores,
-    color = stores)
+   <b>color = stores</b>)
 data = mini_walmart
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-10.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-6.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 Aesthetics: color
 ====================================
@@ -342,19 +318,15 @@ Aesthetics: color
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores,
-    color = state)
+   <b>color = states</b>)
 data = mini_walmart
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-13.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-8.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 Aesthetics: shape
 ====================================
@@ -370,48 +342,91 @@ Aesthetics: shape
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores,
-    shape = state)
+  <b>shape = state</b>)
 data = mini_walmart
+</code></pre>
+
+***
+
+<img src="index-figure/unnamed-chunk-10.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
+
+PRACTICE TIME!!
+====================================
+type: practice
+
+
+```
+  year state stores
+1 2005    FL    174
+2 2005    MI     76
+3 2005    NJ     41
+4 2005    NV     22
+5 2005    VT      4
 ```
 
+<pre><code class="r">
+<b>#COMPLETE THE CODE TO PRODUCE THIS PLOT</b>
+aes(x = state,y = stores)
+data = mini_walmart
+</code></pre>
+
+***
+
+<img src="index-figure/unnamed-chunk-12.png" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
+
+PRACTICE TIME!!
+====================================
+type: practice
+incremental: false
+
+
+```
+  year state stores
+1 2005    FL    174
+2 2005    MI     76
+3 2005    NJ     41
+4 2005    NV     22
+5 2005    VT      4
+```
+
+<pre><code class="r">
+#COMPLETE THE CODE TO PRODUCE THIS PLOT
+aes(x = state,y = stores,
+   <b>color = state,
+   shape = state</b>)
+data = mini_walmart
+</code></pre>
+
+***
+
+<img src="index-figure/unnamed-chunk-14.png" title="plot of chunk unnamed-chunk-14" alt="plot of chunk unnamed-chunk-14" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
+
+PRACTICE TIME!!
+====================================
+type: practice
+
+
+```
+  year state stores
+1 2005    FL    174
+2 2005    MI     76
+3 2005    NJ     41
+4 2005    NV     22
+5 2005    VT      4
+```
+
+<pre><code class="r">
+<b># WHAT ADDITIONAL AESTHETIC MAPPING IS NEEDED TO PRODUCE THIS PLOT?</b>
+aes(x = state,y = stores)
+data = mini_walmart
+</code></pre>
 
 ***
 
 <img src="index-figure/unnamed-chunk-16.png" title="plot of chunk unnamed-chunk-16" alt="plot of chunk unnamed-chunk-16" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
-
-PRACTICE TIME!!
-====================================
-type: practice
-
-
-```
-  year state stores
-1 2005    FL    174
-2 2005    MI     76
-3 2005    NJ     41
-4 2005    NV     22
-5 2005    VT      4
-```
-
-
-
-```r
-#COMPLETE THE CODE TO PRODUCE THIS PLOT
-aes(x = state,y = stores)
-data = mini_walmart
-```
-
-
-***
-
-<img src="index-figure/unnamed-chunk-19.png" title="plot of chunk unnamed-chunk-19" alt="plot of chunk unnamed-chunk-19" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
-
 PRACTICE TIME!!
 ====================================
 type: practice
@@ -427,83 +442,19 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
-#COMPLETE THE CODE TO PRODUCE THIS PLOT
-aes(x = state,y = stores,
-    color = state,
-    shape = state)
-data = mini_walmart
-```
-
-
-***
-
-<img src="index-figure/unnamed-chunk-22.png" title="plot of chunk unnamed-chunk-22" alt="plot of chunk unnamed-chunk-22" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
-
-PRACTICE TIME!!
-====================================
-type: practice
-
-
-```
-  year state stores
-1 2005    FL    174
-2 2005    MI     76
-3 2005    NJ     41
-4 2005    NV     22
-5 2005    VT      4
-```
-
-
-
-```r
-# WHAT ADDITIONAL AESTHETIC MAPPING IS NEEDED TO PRODUCE THIS PLOT?
-aes(x = state,y = stores)
-data = mini_walmart
-```
-
-
-***
-
-<img src="index-figure/unnamed-chunk-25.png" title="plot of chunk unnamed-chunk-25" alt="plot of chunk unnamed-chunk-25" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
-
-PRACTICE TIME!!
-====================================
-type: practice
-incremental: false
-
-
-```
-  year state stores
-1 2005    FL    174
-2 2005    MI     76
-3 2005    NJ     41
-4 2005    NV     22
-5 2005    VT      4
-```
-
-
-
-```r
+<pre><code class="r">
 # WHAT ADDITIONAL AESTHETIC MAPPING IS NEEDED TO PRODUCE THIS PLOT?
 aes(x = state,y = stores,
-    size = stores)
+   <b>size = stores</b>)
 data = mini_walmart
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-28.png" title="plot of chunk unnamed-chunk-28" alt="plot of chunk unnamed-chunk-28" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-18.png" title="plot of chunk unnamed-chunk-18" alt="plot of chunk unnamed-chunk-18" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 SCALE
 ====================================
-
 
 ![](./tof/ggtab_scale.png)
 
@@ -521,18 +472,14 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-31.png" title="plot of chunk unnamed-chunk-31" alt="plot of chunk unnamed-chunk-31" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-20.png" title="plot of chunk unnamed-chunk-20" alt="plot of chunk unnamed-chunk-20" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 Scale: position (default)
 ====================================
@@ -548,19 +495,15 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart 
-scale_y_continuous()
-```
-
+<b>scale_y_continuous()</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-34.png" title="plot of chunk unnamed-chunk-34" alt="plot of chunk unnamed-chunk-34" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-22.png" title="plot of chunk unnamed-chunk-22" alt="plot of chunk unnamed-chunk-22" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Scale: position (log)
@@ -577,19 +520,15 @@ Scale: position (log)
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart 
-scale_y_log10()
-```
-
+<b>scale_y_log10()</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-37.png" title="plot of chunk unnamed-chunk-37" alt="plot of chunk unnamed-chunk-37" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-24.png" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Scale: color
@@ -606,19 +545,15 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores,
-    color = stores)
+   <b>color = stores</b>)
 data = mini_walmart 
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-40.png" title="plot of chunk unnamed-chunk-40" alt="plot of chunk unnamed-chunk-40" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-26.png" title="plot of chunk unnamed-chunk-26" alt="plot of chunk unnamed-chunk-26" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Scale: color
@@ -635,20 +570,16 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores,
     color = stores)
 data = mini_walmart
-scale_color_continuous()
-```
-
+<b>scale_color_continuous()</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-43.png" title="plot of chunk unnamed-chunk-43" alt="plot of chunk unnamed-chunk-43" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-28.png" title="plot of chunk unnamed-chunk-28" alt="plot of chunk unnamed-chunk-28" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Scale: color
@@ -665,22 +596,18 @@ Scale: color
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores,
     color = stores)
 data = mini_walmart
-scale_color_continuous(
+<b>scale_color_continuous(
   low = 'light green',
-  high = 'dark green')
-```
-
+  high = 'dark green')</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-46.png" title="plot of chunk unnamed-chunk-46" alt="plot of chunk unnamed-chunk-46" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-30.png" title="plot of chunk unnamed-chunk-30" alt="plot of chunk unnamed-chunk-30" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Geometric objects: point
@@ -704,18 +631,14 @@ Geometric objects: point
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-49.png" title="plot of chunk unnamed-chunk-49" alt="plot of chunk unnamed-chunk-49" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-32.png" title="plot of chunk unnamed-chunk-32" alt="plot of chunk unnamed-chunk-32" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Geometric objects: point
@@ -732,19 +655,15 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-geom_point()
-```
-
+<b>geom_point()</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-52.png" title="plot of chunk unnamed-chunk-52" alt="plot of chunk unnamed-chunk-52" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-34.png" title="plot of chunk unnamed-chunk-34" alt="plot of chunk unnamed-chunk-34" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Geometric objects: bar
@@ -761,14 +680,11 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-geom_bar()
-```
-
+<b>geom_bar()</b>
+</code></pre>
 
 ***
 
@@ -790,19 +706,15 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-geom_bar()
-```
-
+<b>geom_bar()</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-57.png" title="plot of chunk unnamed-chunk-57" alt="plot of chunk unnamed-chunk-57" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-37.png" title="plot of chunk unnamed-chunk-37" alt="plot of chunk unnamed-chunk-37" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 PRACTICE TIME!!
@@ -820,19 +732,15 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
-# COMPLETE THE CODE TO PRODUCE THIS PLOT
+<pre><code class="r">
+<b># COMPLETE THE CODE TO PRODUCE THIS PLOT</b>
 aes(x = state,y = stores)
 data = mini_walmart
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-60.png" title="plot of chunk unnamed-chunk-60" alt="plot of chunk unnamed-chunk-60" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-39.png" title="plot of chunk unnamed-chunk-39" alt="plot of chunk unnamed-chunk-39" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 PRACTICE TIME!!
@@ -850,20 +758,16 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 # COMPLETE THE CODE TO PRODUCE THIS PLOT
 aes(x = state,y = stores)
 data = mini_walmart
-geom_line()
-```
-
+<b>geom_line()</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-63.png" title="plot of chunk unnamed-chunk-63" alt="plot of chunk unnamed-chunk-63" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-41.png" title="plot of chunk unnamed-chunk-41" alt="plot of chunk unnamed-chunk-41" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Geometric objects: text
@@ -880,14 +784,11 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-geom_text()
-```
-
+<b>geom_text()</b>
+</code></pre>
 
 ***
 
@@ -909,14 +810,11 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores)
 data = mini_walmart
-geom_text()
-```
-
+<b>geom_text()</b>
+</code></pre>
 
 ***
 
@@ -937,20 +835,16 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = state,y = stores,
-    label = stores)
+  <b>label = stores</b>)
 data = mini_walmart
 geom_text()
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-70.png" title="plot of chunk unnamed-chunk-70" alt="plot of chunk unnamed-chunk-70" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-45.png" title="plot of chunk unnamed-chunk-45" alt="plot of chunk unnamed-chunk-45" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Position adjustment: identity
@@ -973,19 +867,15 @@ Position adjustment: identity
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores)
 data = mini_walmart
 geom_point()
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-73.png" title="plot of chunk unnamed-chunk-73" alt="plot of chunk unnamed-chunk-73" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-47.png" title="plot of chunk unnamed-chunk-47" alt="plot of chunk unnamed-chunk-47" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Position adjustment: identity
@@ -1002,20 +892,16 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores)
 data = mini_walmart
 geom_point()
-position = 'identity'
-```
-
+<b>position = 'identity'</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-76.png" title="plot of chunk unnamed-chunk-76" alt="plot of chunk unnamed-chunk-76" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-49.png" title="plot of chunk unnamed-chunk-49" alt="plot of chunk unnamed-chunk-49" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Position adjustment: identity
@@ -1032,15 +918,12 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores)
 data = mini_walmart
-geom_bar()
-position = identity
-```
-
+<b>geom_bar()
+position = identity</b>
+</code></pre>
 
 ***
 
@@ -1061,20 +944,16 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores)
 data = mini_walmart
 geom_bar()
-position = identity
-```
-
+<b>position = identity</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-81.png" title="plot of chunk unnamed-chunk-81" alt="plot of chunk unnamed-chunk-81" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-52.png" title="plot of chunk unnamed-chunk-52" alt="plot of chunk unnamed-chunk-52" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Position adjustment: identity
@@ -1091,21 +970,17 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   <b>fill = state</b>)
 data = mini_walmart
 geom_bar()
 position = identity
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-84.png" title="plot of chunk unnamed-chunk-84" alt="plot of chunk unnamed-chunk-84" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-54.png" title="plot of chunk unnamed-chunk-54" alt="plot of chunk unnamed-chunk-54" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Position adjustment: identity
@@ -1122,21 +997,17 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   <b>fill = state</b>)
 data = mini_walmart
 geom_bar()
 position = identity
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-87.png" title="plot of chunk unnamed-chunk-87" alt="plot of chunk unnamed-chunk-87" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-56.png" title="plot of chunk unnamed-chunk-56" alt="plot of chunk unnamed-chunk-56" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Position adjustment: identity
@@ -1153,21 +1024,17 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   <b>fill = state</b>)
 data = mini_walmart
 geom_bar()
 position = identity
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-90.png" title="plot of chunk unnamed-chunk-90" alt="plot of chunk unnamed-chunk-90" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-58.png" title="plot of chunk unnamed-chunk-58" alt="plot of chunk unnamed-chunk-58" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Position adjustment: identity
@@ -1184,21 +1051,17 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   <b>fill = state</b>)
 data = mini_walmart
 geom_bar()
 position = identity
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-93.png" title="plot of chunk unnamed-chunk-93" alt="plot of chunk unnamed-chunk-93" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-60.png" title="plot of chunk unnamed-chunk-60" alt="plot of chunk unnamed-chunk-60" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Position adjustment: identity
@@ -1215,21 +1078,17 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   <b>fill = state</b>)
 data = mini_walmart
 geom_bar()
 position = identity
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-96.png" title="plot of chunk unnamed-chunk-96" alt="plot of chunk unnamed-chunk-96" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-62.png" title="plot of chunk unnamed-chunk-62" alt="plot of chunk unnamed-chunk-62" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Position adjustment: identity
@@ -1246,21 +1105,17 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   <b>fill = state</b>)
 data = mini_walmart
 geom_bar()
 position = identity
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-99.png" title="plot of chunk unnamed-chunk-99" alt="plot of chunk unnamed-chunk-99" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-64.png" title="plot of chunk unnamed-chunk-64" alt="plot of chunk unnamed-chunk-64" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Position adjustment: dodge
@@ -1277,21 +1132,17 @@ Position adjustment: dodge
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   fill = state)
 data = mini_walmart
 geom_bar()
-position = dodge
-```
-
+<b>position = dodge</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-102.png" title="plot of chunk unnamed-chunk-102" alt="plot of chunk unnamed-chunk-102" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-66.png" title="plot of chunk unnamed-chunk-66" alt="plot of chunk unnamed-chunk-66" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Position adjustment: stack
@@ -1308,21 +1159,17 @@ Position adjustment: stack
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores,
     fill = state)
 data = mini_walmart
 geom_bar()
-position = stack
-```
-
+<b>position = stack</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-105.png" title="plot of chunk unnamed-chunk-105" alt="plot of chunk unnamed-chunk-105" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-68.png" title="plot of chunk unnamed-chunk-68" alt="plot of chunk unnamed-chunk-68" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 Position adjustment: fill
@@ -1339,24 +1186,17 @@ Position adjustment: fill
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores,
     fill = state)
 data = mini_walmart
 geom_bar()
-position = fill
-```
-
+<b>position = fill</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-108.png" title="plot of chunk unnamed-chunk-108" alt="plot of chunk unnamed-chunk-108" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
-
-
-
+<img src="index-figure/unnamed-chunk-70.png" title="plot of chunk unnamed-chunk-70" alt="plot of chunk unnamed-chunk-70" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 COORDINATE SYSTEM: cartesian
@@ -1379,21 +1219,17 @@ COORDINATE SYSTEM: cartesian
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   fill = state)
 data = mini_walmart
 geom_bar()
 position = fill
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-111.png" title="plot of chunk unnamed-chunk-111" alt="plot of chunk unnamed-chunk-111" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-72.png" title="plot of chunk unnamed-chunk-72" alt="plot of chunk unnamed-chunk-72" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 COORDINATE SYSTEM: cartesian
@@ -1410,22 +1246,18 @@ COORDINATE SYSTEM: cartesian
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores,
-    fill = state)
+   fill = state)
 data = mini_walmart
 geom_bar()
 position = fill
-coord_cartesian()
-```
-
+<b>coord_cartesian()</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-114.png" title="plot of chunk unnamed-chunk-114" alt="plot of chunk unnamed-chunk-114" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-74.png" title="plot of chunk unnamed-chunk-74" alt="plot of chunk unnamed-chunk-74" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 COORDINATE SYSTEM: cartesian
@@ -1442,17 +1274,14 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores,
     fill = state)
 data = mini_walmart
 geom_bar()
 position = fill
-coord_polar()
-```
-
+<b>coord_polar()</b>
+</code></pre>
 
 ***
 
@@ -1474,22 +1303,18 @@ incremental: false
 5 2005    VT      4
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = year,y = stores,
     fill = state)
 data = mini_walmart
 geom_bar()
 position = fill
-coord_polar()
-```
-
+<b>coord_polar()</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-119.png" title="plot of chunk unnamed-chunk-119" alt="plot of chunk unnamed-chunk-119" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-77.png" title="plot of chunk unnamed-chunk-77" alt="plot of chunk unnamed-chunk-77" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 ====================================
 incremental: false
@@ -1540,19 +1365,15 @@ STATISTICAL TRANSFORMATION: identity
 5 2005    VT      4  0.05
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = stores, y = share)
 data = mini_walmart
 geom_point()
-```
-
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-122.png" title="plot of chunk unnamed-chunk-122" alt="plot of chunk unnamed-chunk-122" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-79.png" title="plot of chunk unnamed-chunk-79" alt="plot of chunk unnamed-chunk-79" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 STATISTICAL TRANSFORMATION: identity
@@ -1569,19 +1390,15 @@ STATISTICAL TRANSFORMATION: identity
 5 2005    VT      4  0.05
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = stores, y = share)
 data = mini_walmart
-geom_point(stat = 'identity')
-```
-
+geom_point(<b>stat = 'identity'</b>)
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-125.png" title="plot of chunk unnamed-chunk-125" alt="plot of chunk unnamed-chunk-125" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-81.png" title="plot of chunk unnamed-chunk-81" alt="plot of chunk unnamed-chunk-81" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 STATISTICAL TRANSFORMATION: smooth
@@ -1598,19 +1415,15 @@ STATISTICAL TRANSFORMATION: smooth
 5 2005    VT      4  0.05
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = stores, y = share)
 data = mini_walmart
-geom_point(stat = 'smooth')
-```
-
+geom_point(<b>stat = 'smooth'</b>)
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-128.png" title="plot of chunk unnamed-chunk-128" alt="plot of chunk unnamed-chunk-128" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-83.png" title="plot of chunk unnamed-chunk-83" alt="plot of chunk unnamed-chunk-83" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 STATISTICAL TRANSFORMATION: smooth
@@ -1627,19 +1440,15 @@ STATISTICAL TRANSFORMATION: smooth
 5 2005    VT      4  0.05
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = stores, y = share)
 data = mini_walmart
-geom_line(stat = 'smooth')
-```
-
+<b>geom_line</b>(stat = 'smooth')
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-131.png" title="plot of chunk unnamed-chunk-131" alt="plot of chunk unnamed-chunk-131" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-85.png" title="plot of chunk unnamed-chunk-85" alt="plot of chunk unnamed-chunk-85" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 LAYER
@@ -1656,19 +1465,15 @@ LAYER
 5 2005    VT      4  0.05
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = stores, y = share)
 data = mini_walmart
-geom_point(stat = 'identity')
-```
-
+<b>geom_point(stat = 'identity')</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-134.png" title="plot of chunk unnamed-chunk-134" alt="plot of chunk unnamed-chunk-134" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-87.png" title="plot of chunk unnamed-chunk-87" alt="plot of chunk unnamed-chunk-87" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 
 LAYER
@@ -1685,20 +1490,16 @@ LAYER
 5 2005    VT      4  0.05
 ```
 
-
-
-```r
+<pre><code class="r">
 aes(x = stores, y = share)
 data = mini_walmart
-geom_point(stat = 'identity') +
-geom_line(stat = 'smooth')
-```
-
+<b>geom_point(stat = 'identity') +
+geom_line(stat = 'smooth')</b>
+</code></pre>
 
 ***
 
-<img src="index-figure/unnamed-chunk-137.png" title="plot of chunk unnamed-chunk-137" alt="plot of chunk unnamed-chunk-137" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
-
+<img src="index-figure/unnamed-chunk-89.png" title="plot of chunk unnamed-chunk-89" alt="plot of chunk unnamed-chunk-89" width="700" height="700" style="display: block; margin: auto 0 auto auto;" />
 
 LAYER
 ====================================
