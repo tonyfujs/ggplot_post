@@ -42,23 +42,7 @@ WHY USE R & ggplot2?
 
 WHY USE R & ggplot2?
 ========================================================
-![](./tof/dutch_shipping.png)
-
-WHY USE R & ggplot2?
-========================================================
-![](./tof/weird_plot.png)
-
-WHY USE R & ggplot2?
-========================================================
 ![](./tof/h_bullet_chart.png)
-
-WHY USE R & ggplot2?
-========================================================
-![](./tof/density.jpg)
-
-WHY USE R & ggplot2?
-========================================================
-![](./tof/contour.png)
 
 WHY USE R & ggplot2?
 ========================================================
@@ -80,7 +64,7 @@ and this plot?
 ONE LINE OF CODE!!
 ========================================================
 
-# facet_wrap(~year)
+## facet_wrap(~year)
 
 WHY USE R & ggplot2?
 ========================================================
@@ -247,6 +231,14 @@ data = mini_walmart
 ```
 
 ***
+
+<pre><code class="r">
+ggplot() + 
+geom_point(
+ aes(x = state,y = stores),
+ <b>data = mini_walmart</b>)
+</code></pre>
+
 AESTHETIC MAPPING
 ====================================
 
