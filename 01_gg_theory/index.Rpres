@@ -1,6 +1,6 @@
-Ggplot2: R you ready?
+Dataviz with R
 ========================================================
-author: Understanding the Grammar to Graphics (gg) framework
+author: ggplot2 & the grammar of graphics
 transition: rotate
 transition-speed: slow
 width: 1440
@@ -8,7 +8,6 @@ height: 900
 incremental: true
 date: `r format(Sys.Date(), format="%B %d, %Y")`
 css: ./theme/my_style.css
-
 
 <small> Tony Fujs </small>
 
@@ -24,7 +23,106 @@ load('./data/01_gg_theory.Rdata')
 
 
 ========================================================
-<q>Ggplot2 is an __amazing__ tool for static data visualization. It is not necessarily obvious to realize how powerful it is until you get a strong understanding of its underlying logic though: The Grammar of Graphics. Using ggplot2 without understanding its underlying logic is possible, like going to see a 3D movie without your 3D glasses... You can certainly do it, but don't expect to get the full experience.</q>
+incremental: false
+
+# Dataviz tools?
+
+WHY USE R & ggplot2?
+========================================================
+* Flexible
+* Powerful
+
+WHY USE R & ggplot2?
+========================================================
+![](./tof/bike_ggplot.png)
+
+WHY USE R & ggplot2?
+========================================================
+![](./tof/facebook.png)
+
+WHY USE R & ggplot2?
+========================================================
+![](./tof/dutch_shipping.png)
+
+WHY USE R & ggplot2?
+========================================================
+![](./tof/weird_plot.png)
+
+WHY USE R & ggplot2?
+========================================================
+![](./tof/h_bullet_chart.png)
+
+WHY USE R & ggplot2?
+========================================================
+![](./tof/density.jpg)
+
+WHY USE R & ggplot2?
+========================================================
+![](./tof/contour.png)
+
+WHY USE R & ggplot2?
+========================================================
+* Flexible
+* Powerful
+* Scaling
+
+Difference between this plot...
+========================================================
+
+![](./tof/simple_map.png)
+
+and this plot?
+========================================================
+
+![](./tof/map.png)
+
+
+ONE LINE OF CODE!!
+========================================================
+
+# facet_wrap(~year)
+
+WHY USE R & ggplot2?
+========================================================
+
+* Flexible
+* Powerful
+* Scaling
+* Reproducible work
+
+WHY USE R & ggplot2?
+========================================================
+incremental: false
+
+* Flexible
+* Powerful
+* Scaling
+* Reproducible work
+* Building block for other tools (lyra, ggvis, SPSS)
+
+
+What is ggplot2?
+========================================================
+* R package (Tool in the R toolbox)
+* Rely on the Grammar of Graphics (gg)
+
+***
+
+![](./tof/hadley.png)
+
+
+Barriers to entry
+========================================================
+* R: From point & click to writing code
+* Learning Grammar of Graphics (gg) - as opposed to typology
+
+
+Objective of the workshop
+========================================================
+
+### Remove those barriers
+* Understand the gg framework
+* Play with simple code
 
 How do we do it?
 ========================================================
@@ -36,6 +134,46 @@ incremental: false
 
 ![](./tof/emmet.jpg)
 
+
+How do we do it?
+========================================================
+incremental: false
+
+1. gg theory
+2. create simple plots
+
+***
+
+![](./tof/pos_id_bar.png)
+
+How do we do it?
+========================================================
+incremental: false
+
+1. gg theory
+2. create simple plots
+3. create complex plot(s)
+
+***
+
+![](./tof/map.png)
+
+
+Napoleon's Russian Campaign: Original
+========================================================
+
+![](./tof/minard_map.png)
+
+Napoleon's Russian Campaign: ggplot2
+========================================================
+
+![](./tof/minard_map_gg.png)
+
+
+Small multiples: Walmart stores
+========================================================
+
+![](./tof/map.png)
 
 
 ========================================================
@@ -508,7 +646,7 @@ mini_walmart[,1:3]
 ```{r, eval = FALSE}
 aes(x = state,y = stores)
 data = mini_walmart
-geom_point()
+geom_bar()
 ```
 
 ***
